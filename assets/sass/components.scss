@@ -1,0 +1,292 @@
+body{
+    background-color: color('white');
+    font-family: $base-font-family;
+}
+
+h1{
+    font-size: 52px;
+    @include tablet{
+        font-size: 46px;
+        line-height: 1.6em;
+    }
+    @include mobile{
+        font-size: 40px;
+        line-height: 1.6em;
+    }
+}
+h2{
+    font-size: 48px;
+    line-height: 72px;
+    @include tablet{
+        font-size: 40px;
+        line-height: 1.6em;
+    }
+    @include mobile{
+        font-size: 30px;
+        line-height: 1.6em;
+    }
+}
+h3{
+    font-size: 36px;
+    line-height: 54px;
+    @include tablet{
+        font-size: 26px;
+        line-height: 1.6em;
+    }
+    @include mobile{
+        font-size: 20px;
+        line-height: 1.6em;
+    }
+}
+h5{
+    font-size: 20px;
+    line-height: 30px;
+    @include mobile{
+        font-size: 18px;
+        line-height: 1.6em;
+    }
+}
+h6{
+    font-size: 18px;
+    @include mobile{
+        font-size: 16px;
+        line-height: 1.6em;
+    }
+}
+p{
+    font-size: $base-font-size;
+    line-height: 24px;
+    @include mobile{
+        font-size: $base-font-size - 2;
+        line-height: 1.6em;
+    }
+}
+a{
+    text-decoration: none;
+}
+
+.btn{
+    padding: 12px 20px!important;
+    height: auto!important;
+    text-transform: uppercase;
+}
+
+nav{
+    @include transition(0.3s all ease);
+    background-color: transparentize($color: color('white'), $amount: .1);
+    backdrop-filter: blur(10px);
+    padding: 40px 0 12px!important;
+    @include tablet-lg{
+        padding: 12px 0!important;
+    }
+    @include tablet{
+        padding: 12px 0!important;
+        border-bottom: 1px solid color('soft');
+    }
+    .logo{
+        height: 30px;
+        @include tablet{
+            height: 25px;
+        }
+        @include mobile{
+            height: 20px;
+        }
+    }
+    .navbar-toggler{
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    .nav-item{
+        @include tablet{
+            width: 100%;
+            border-bottom: 1px solid color('soft');
+            &:last-child, &:nth-last-child(2){
+                border-bottom: 0;
+            }
+        }
+        .nav-link{
+            padding: 0 20px!important;
+            &.active{
+                font-weight: 500;
+            }
+            @include tablet-lg{
+                padding: 0 12px!important;
+                font-size: $base-font-size - 2!important;
+            }
+            @include tablet{
+                padding: 8px 0!important;
+            }
+        }
+        .nav-btn{
+            padding-right: 0!important;
+            .btn{
+                @include tablet-lg{
+                    font-size: $base-font-size - 2!important;
+                }
+            }
+        }
+    }
+}
+
+header{
+    padding: 190px 0 100px;
+    background: color('white') url('../img/bg-header.png')no-repeat bottom center;
+    background-size: 100%;
+    font-weight: 500;
+    @include tablet{
+        padding: 120px 0 30px;
+    }
+    @include mobile{
+        background: color('white') url('../img/bg-header.png')no-repeat center center;
+        background-size: 100%;
+        padding: 100px 0 30px;
+    }
+}
+
+section, footer{
+    padding: 70px 0;
+    @include mobile{
+        padding: 30px 0;
+    }
+}
+
+.feature-icon{
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    background-color: color('primary');
+    margin-bottom: 24px;
+    @include border-radius(26px);
+    @include mobile{
+        margin-bottom: 12px;
+    }
+    img{
+        height: 38px;
+        top: 50%;
+        position: relative;
+        transform: translateY(-50%);
+    }
+}
+
+.pricing-wrapper{
+    position: relative;
+    &:before{
+        content: '';
+        background-color: color('info');
+        width: 100%;
+        height: 570px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @include tablet{
+            height: 80%
+        }
+    }
+    .pricing{
+        @include border-radius(11px);
+        @include box-shadow(0px 4px 30px rgba(0, 0, 0, 0.05));
+        .card-body{
+            padding: 20px 30px 30px 30px;
+        }
+        &-badge{
+            padding: 20px;
+            text-align: center;
+            background-color: color('dark');
+            color: color('white');
+        }
+        &.choice{
+            border: 3px solid color('dark');  
+            li:before{
+                background: color('secondary') url('../img/icons/checkmark.png')no-repeat center center!important;
+                background-size: 12px!important;
+            }
+        }
+        hr{
+            border: 2px solid color('soft');
+        }
+        .list{
+            li{
+                list-style: none;
+                font-size: $base-font-size;
+                font-weight: 500;
+                position: relative;
+                margin-bottom: 22px;
+                right: -8px;
+                &:before{
+                    content: '';
+                    width: 26px;
+                    height: 26px;
+                    background: color('primary') url('../img/icons/checkmark.png')no-repeat center center;
+                    background-size: 12px;
+                    position: absolute;
+                    top: -2px;
+                    left: -38px;
+                    @include border-radius(100%);
+                }
+            }
+        }
+    }
+}
+
+.underline{
+    border-bottom: 2px solid color('primary');
+}
+
+footer{
+    color: color('white');
+    background: color('secondary') url('../img/bg-footer.png')no-repeat top center;
+    background-size: 100%;
+    @include mobile{
+        background: color('secondary') url('../img/bg-footer.png')no-repeat center center;
+        background-size: 100%;
+    }
+    .review{
+        position: relative;
+        .quote-icon{
+            position: absolute;
+            top: -30px;
+            left: -70px;
+            width: 60px;
+            @include tablet{
+                width: 30px;
+                top: -10px;
+                left: -30px;
+            }
+            @include mobile{
+                width: 20px;
+                top: 0;
+                left: -30px;
+            }
+        }
+        .user-photo{
+            margin-bottom: 16px;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            object-position: center;
+            @include border-radius(36px);
+            @include mobile{
+                width: 80px;
+                height: 80px;
+                @include border-radius(26px);
+            }
+        }
+    }
+}
+.container{
+    @include desktop{
+        max-width: 90%;
+    }
+    @include tablet-lg{
+        max-width: 95%;
+    }
+}
+.navscroll{
+    padding: 20px 0!important;
+    @include transition(0.3s all ease);
+    @include box-shadow(0 20px 50px transparentize(color('secondary'), .95));
+    @include tablet-lg{
+        padding: 12px 0!important;
+    }
+}

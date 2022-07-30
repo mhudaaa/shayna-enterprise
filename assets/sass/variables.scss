@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$colors: (
+	'white'		: #FFFFFF,
+	'soft'		: #DFE2E4,
+	'grey'		: #ABA6BB,
+	'primary'	: #614EF5,
+	'muted'		: #5A6772,
+	'info'		: #E7F6FF,
+	'secondary'	: #150544,
+	'dark'	    : #160647,
+);
+
+
+// Default Font Settings
+$base-font-size   : 16px;
+$base-font-family : 'Poppins', sans-serif;
+
+// Responsive Breakpoint
+$breakpoint-sm	: 576px;
+$breakpoint-md	: 768px;
+$breakpoint-lg	: 992px;
+$breakpoint-xl	: 1200px;

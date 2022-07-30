@@ -1,0 +1,47 @@
+// MIXINS
+// ----------------------------------------------------------
+@mixin box-shadow($shadows...){
+    box-shadow: $shadows !important;
+	-moz-box-shadow: $shadows !important;
+	-webkit-box-shadow: $shadows !important;
+	-o-box-shadow: $shadows !important;
+}
+
+@mixin border-radius($radius...){
+	border-radius: $radius;
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+}
+
+@mixin transition($transition...){
+	transition: $transition;
+	-moz-transition: $transition;
+	-webkit-transition: $transition;
+	-o-transition: $transition;
+	-ms-transition: $transition;
+}
+
+// Responsive Media Queries
+@mixin desktop {
+	@media (min-width: $breakpoint-xl) { 
+		@content; 
+	}
+}
+  
+@mixin tablet-lg {
+	@media (max-width: $breakpoint-lg) { 
+		@content; 
+	}
+}
+
+@mixin tablet {
+	@media (max-width: $breakpoint-md) { 
+		@content; 
+	}
+}
+
+@mixin mobile {
+	@media (max-width: $breakpoint-sm) { 
+		@content; 
+	}
+}

@@ -1,0 +1,6 @@
+@import 'variables';
+@import 'mixins';
+@import 'functions';
+@import 'components';
+
+// sass --watch app.scss:../css/styles.min.css --style compressed
